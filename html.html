@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <title>Hotel Accommodation Form</title> 
+      <style> 
+         /* Add some basic styling */
+         form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+         }
+         
+         label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+         }
+         
+         input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+         }
+         
+         select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+         }
+      </style> 
+   </head> 
+   <body> 
+      <h1>Hotel Accommodation Form</h1> 
+      <form action="submit-form.php" method="POST"> 
+         <div> 
+            <label for="first-name">First Name:</label> 
+            <input type="text" id="first-name" name="first-name" required> 
+         </div> 
+         <div> 
+            <label for="last-name">Last Name:</label> 
+            <input type="text" id="last-name" name="last-name" required> 
+         </div> 
+         <div> 
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" required> 
+         </div> 
+         <div> 
+            <label for="phone-number">Phone Number:</label> 
+            <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required> 
+         </div> 
+         <div> 
+            <label for="check-in-date">Check-In Date:</label> 
+            <input type="date" id="check-in-date" name="check-in-date" required> 
+         </div> 
+         <div> 
+            <label for="check-out-date">Check-Out Date:</label> 
+            <input type="date" id="check-out-date" name="check-out-date" required> 
+         </div> 
+         <div> 
+            <label for="room-type">Room Type:</label> 
+            <select id="room-type" name="room-type" required> 
+               <option value="" disabled selected>Choose a room type</option> 
+               <option value="single">Single Room</option> 
+               <option value="double">Double Room</option> 
+               <option value="suite">Suite</option> 
+            </select> 
+         </div> 
+         <div> 
+            <label for="num-adults">Number of Adults:</label> 
+            <input type="number" id="num-adults" name="num-adults" min="1" max="10" required> 
+         </div> 
+         <div> 
+            <label for="num-children">Number of Children:</label> 
+            <input type="number" id="num-children" name="num-children" min="0" max="10" required> 
+         </div> 
+         <div> 
+            <label for="comments">Comments:</label> 
+            <textarea id="comments" name="comments"></textarea> 
+         </div> 
+         <div> 
+            <input type="submit" value="Submit"> 
+         </div> 
+      </form> 
+   </body> 
+</html> 
